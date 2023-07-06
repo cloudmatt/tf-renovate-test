@@ -8,7 +8,9 @@
       "matchStrings": [
          "# renovate: datasource=(?<datasource>.*) depName=(?<depName>.*) version=(?<currentVersion>.*)\n.*source.*\\?ref=(?<currentValue>.*)\""
       ],
-      "autoReplaceStringTemplate": "\\s*source\\s*=.*ref={{{currentDigest}}}\""
+      "autoReplaceStringTemplate": "\\s*source\\s*=.*ref={{{currentDigest}}}\"",
+      "datasourceTemplate": "{{if datasource}}{{datasource}}{{else}}github-tags{{/if}}",
+      "versioningTemplate": "{{#if version}}{{version}}{{else}}loose{{/if}}"
     }
   ]
 }

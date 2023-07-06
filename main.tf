@@ -1,5 +1,5 @@
 module "aws_kms" {
-  # renovate: datasource=github-releases depName=terraform-aws-modules/terraform-aws-kms version=v1.0.1
+  # renovate: datasource=github-tags depName=terraform-aws-modules/terraform-aws-kms version=v1.0.1
   source = "git@github.com:terraform-aws-modules/terraform-aws-kms.git?ref=v1.0.1"
 
   is_enabled              = true
