@@ -1,11 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "enabledManagers": ["terraform"],
-  "terraform": {
-    "commitMessageTopic": "Terraform {{depName}}",
-    "fileMatch": [
-      "\\.tf$"
-    ],
-    "pinDigests": true
-  }
+  "regexManagers": [
+    {
+      "description": "Search all .tf (terraform) files for a comment above source to determine how to lookup the tag to replace with the latest sha.",
+      "fileMatch": ["\\.tf$"],
+      "matchStrings": [
+         "# renovate: datasource=(?<datasource>.*) depName=(?<depName>.*) version=(?<currentVersion>.*)\n.*source.*\\?ref=(?<currentValue>.*)\""
+      ],
+      "autoReplaceStringTemplate": "\\s*source\\s*=.*ref={{{currentDigest}}}\""
+    }
+  ]
 }
