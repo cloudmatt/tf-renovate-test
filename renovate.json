@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "enabledManagers": ["terraform"],
+  "enabledManagers": ["regex"],
   "regexManagers": [
     {
       "description": "Search all .tf (terraform) files for a comment above source to determine how to lookup the tag to replace with the latest sha.",
