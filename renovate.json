@@ -11,7 +11,7 @@
       "matchStrings": [
          "#\\srenovate:\\sversion=(?<currentVersion>[^\n]*)\\n\\s{2}(?<fooBar>source.*?):(?<depName>[^\n]*)\\.git\\?ref=(?<currentValue>v[^/\"]*)\""
       ],
-      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-tags{{/if}}",
+      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-releases{{/if}}",
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}loose{{/if}}",
       "autoReplaceStringTemplate": "{{{fooBar}}}:{{{depName}}}.git?ref={{{newDigest}}}"
     }
