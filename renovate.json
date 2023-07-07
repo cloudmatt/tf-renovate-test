@@ -15,7 +15,8 @@
   ],
   "packageRules": [
     {
-      "matchFileNames": ["main.tf"]
+      "matchFileNames": ["main.tf"],
+      "matchUpdateTypes": ["digest", "minor", "patch", "pin", "major", "bump", "replacement", "pinDigest"]
     }
   ]
 }
