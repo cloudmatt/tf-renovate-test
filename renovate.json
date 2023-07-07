@@ -9,11 +9,10 @@
       "description": "Search all .tf (terraform) files for a comment above source to determine how to lookup the tag to replace with the latest sha.",
       "fileMatch": ["main.tf"],
       "matchStrings": [
-         "#\\srenovate:\\sversion=(?<currentVersion>[^\n]*)\\n\\s{2}(?<fooBar>source.*?):(?<depName>[^\n]*)\\.git\\?ref=(?<currentValue>v[^/\"]*)\""
+         "#\\srenovate:\\sversion=(?<currentValue>[^\n]*)\\n\\s{2}source.*?:(?<depName>[^\n]*)\\.git\\?ref=(?<currentDigest>[^/\"]*)\""
       ],
-      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-releases{{/if}}",
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}loose{{/if}}",
-      "autoReplaceStringTemplate": "{{{fooBar}}}:{{{depName}}}.git?ref={{{newDigest}}}"
+      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-refs{{/if}}",
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}loose{{/if}}"
     }
   ],
   "packageRules": [
