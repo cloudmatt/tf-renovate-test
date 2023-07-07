@@ -9,7 +9,6 @@
          "#\\srenovate:\\sversion=(?<currentValue>[^\n]*)\\n\\s*source.*?:(?<depName>[^\n]*)\\.git\\?ref=(?<currentVersion>[^/\"]*)\"",
          "#\\srenovate:\\sversion=(?<currentValue>[^\n]*)\\n\\s*source.*?:(?<depName>[^\n]*)\\.git\\?ref=(?<currentDigest>[^/\"]*)\""
       ],
-      "autoReplaceStringTemplate": "\\s*source.*ref={{{newDigest}}}\"",
       "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-releases{{/if}}",
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}loose{{/if}}"
     }
