@@ -6,15 +6,7 @@
       "description": "Search all .tf (terraform) files for a comment above source to determine how to lookup the tag to replace with the latest sha.",
       "fileMatch": ["main.tf"],
       "matchStrings": [
-         "#\\srenovate:\\sversion=(?<currentValue>[^\n]*)\\n\\s*source.*?:(?<depName>[^\n]*)\\.git\\?ref=(?<currentVersion>[^/\"]*)\""
-      ],
-      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-tags{{/if}}",
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}loose{{/if}}"
-    },
-    {
-      "description": "Search all .tf (terraform) files for a comment above source to determine how to lookup the tag to replace with the latest sha.",
-      "fileMatch": ["digest.tf"],
-      "matchStrings": [
+         "#\\srenovate:\\sversion=(?<currentValue>[^\n]*)\\n\\s*source.*?:(?<depName>[^\n]*)\\.git\\?ref=(?<currentVersion>[^/\"]*)\"",
          "#\\srenovate:\\sversion=(?<currentValue>[^\n]*)\\n\\s*source.*?:(?<depName>[^\n]*)\\.git\\?ref=(?<currentDigest>[^/\"]*)\""
       ],
       "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-tags{{/if}}",
