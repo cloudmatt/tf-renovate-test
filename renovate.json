@@ -14,7 +14,7 @@
       ],
       "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-tags{{/if}}",
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}loose{{/if}}",
-      "autoReplaceStringTemplate": "source = git@github.com:{{{depName}}}.git?ref={{{newDigest}}}"
+      "autoReplaceStringTemplate": "source = \"git@github.com:{{{depName}}}.git?ref={{{newDigest}}}\""
     }
   ],
   "packageRules": [
