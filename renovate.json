@@ -12,7 +12,8 @@
          "#\\srenovate:\\sversion=(?<currentValue>[^\n]*)\\n\\s{2}source.*?:(?<depName>[^\n]*)\\.git\\?ref=(?<currentDigest>[^/\"]*)\""
       ],
       "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}git-refs{{/if}}",
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}loose{{/if}}"
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}loose{{/if}}",
+      "packageNameTemplate": "https://github.com/{{{depName}}}"
     }
   ],
   "packageRules": [
