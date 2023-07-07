@@ -15,8 +15,7 @@
   ],
   "packageRules": [
     {
-      "matchManagers": ["regex"],
-      "matchDatasources": ["github-tags"]
+      "matchFileNames": ["main.tf"]
     }
   ]
 }
